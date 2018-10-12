@@ -29,6 +29,8 @@ gulp.task("styles", function(){
         .pipe(gulp.dest("dist/styles"))
 });
 
+
+
 gulp.task("images", function(){
     return gulp.src(["images/**.jpg","images/**.png"])
         .pipe(imagemin())
@@ -57,5 +59,6 @@ gulp.task("serve", function(){
             open: true
         }));
 })
+
 
 gulp.task("default",gulp.series("build", "serve"));
